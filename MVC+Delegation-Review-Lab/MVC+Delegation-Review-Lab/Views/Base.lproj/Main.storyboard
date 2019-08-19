@@ -61,11 +61,11 @@
                     <navigationItem key="navigationItem" id="T0X-yL-q42">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ck9-A0-9hB">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezi-vz-EZw" userLabel="Settings">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
-                                    <segue destination="DXF-rJ-ci4" kind="show" identifier="clickToDetailsSegue" id="D88-Py-OgB"/>
+                                    <segue destination="DXF-rJ-ci4" kind="show" identifier="clickToSettingsSegue" id="D88-Py-OgB"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -85,7 +85,39 @@
                     <view key="view" contentMode="scaleToFill" id="2yZ-qD-mb9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change TableView Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfl-Ha-4Ek">
+                                <rect key="frame" x="99" y="329.5" width="216" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-zl-DT7">
+                                <rect key="frame" x="139" y="539.5" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-g5-WGR">
+                                <rect key="frame" x="48" y="400.5" width="318" height="31"/>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8wa-1h-1dC">
+                                <rect key="frame" x="160" y="460.5" width="94" height="29"/>
+                            </stepper>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rag-g5-WGR" firstAttribute="top" secondItem="Yfl-Ha-4Ek" secondAttribute="bottom" constant="50" id="23s-eP-2Rq"/>
+                            <constraint firstItem="Rag-g5-WGR" firstAttribute="centerX" secondItem="8wa-1h-1dC" secondAttribute="centerX" id="7aX-sS-cDI"/>
+                            <constraint firstItem="1jn-zl-DT7" firstAttribute="top" secondItem="8wa-1h-1dC" secondAttribute="bottom" constant="50" id="8NR-pz-DhI"/>
+                            <constraint firstItem="OSK-7c-Tv6" firstAttribute="trailing" secondItem="Rag-g5-WGR" secondAttribute="trailing" constant="50" id="9Rc-jT-3EY"/>
+                            <constraint firstItem="8wa-1h-1dC" firstAttribute="top" secondItem="Rag-g5-WGR" secondAttribute="bottom" constant="30" id="IFD-F3-pYe"/>
+                            <constraint firstItem="Rag-g5-WGR" firstAttribute="leading" secondItem="OSK-7c-Tv6" secondAttribute="leading" constant="50" id="Vsn-fO-DhW"/>
+                            <constraint firstItem="8wa-1h-1dC" firstAttribute="centerY" secondItem="OSK-7c-Tv6" secondAttribute="centerY" id="ew9-Lh-6pS"/>
+                            <constraint firstItem="1jn-zl-DT7" firstAttribute="centerX" secondItem="8wa-1h-1dC" secondAttribute="centerX" id="pXn-td-ZzP"/>
+                            <constraint firstItem="8wa-1h-1dC" firstAttribute="centerX" secondItem="OSK-7c-Tv6" secondAttribute="centerX" id="qnJ-0a-laY"/>
+                            <constraint firstItem="Yfl-Ha-4Ek" firstAttribute="centerX" secondItem="8wa-1h-1dC" secondAttribute="centerX" id="xTe-Su-o6K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OSK-7c-Tv6"/>
                     </view>
                 </viewController>
