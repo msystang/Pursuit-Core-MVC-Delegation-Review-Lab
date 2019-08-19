@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="787" y="672"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="S4m-nt-jXV">
             <objects>
-                <viewController id="DXF-rJ-ci4" sceneMemberID="viewController">
+                <viewController id="DXF-rJ-ci4" customClass="SettingsViewController" customModule="MVC_Delegation_Review_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2yZ-qD-mb9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OSK-7c-Tv6"/>
                     </view>
+                    <connections>
+                        <outlet property="previewFontLabel" destination="1jn-zl-DT7" id="aR7-gX-dRQ"/>
+                        <outlet property="slider" destination="Rag-g5-WGR" id="F5H-OG-QGH"/>
+                        <outlet property="stepper" destination="7aX-sS-cDI" id="JBt-WQ-WVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osy-qI-OKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
