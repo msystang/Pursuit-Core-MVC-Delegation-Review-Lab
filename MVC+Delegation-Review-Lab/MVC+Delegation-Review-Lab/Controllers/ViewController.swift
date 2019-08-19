@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let movies = Movie.allMovies
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
 
@@ -22,13 +26,20 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
+        let movie = movies[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") {
+        
+            cell.textLabel?.text = movie.name
+            cell.detailTextLabel?.text = String(movie.year)
+        return cell
+        }
+    return UITableViewCell()
     }
-    
-    
     
 }
