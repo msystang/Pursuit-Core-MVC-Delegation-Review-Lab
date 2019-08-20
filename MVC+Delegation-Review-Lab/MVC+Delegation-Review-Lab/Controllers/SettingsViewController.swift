@@ -14,8 +14,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var previewFontLabel: UILabel!
     
+    // creates optional instance of protocol FontChangeable
     var fontChange: FontChangeable?
     var startingFontSize = Font.startingFontSize
+    
+    // creates property observer that applies the delegate method and calls function to update labels based on that method
     var newFontSize: Int! {
         didSet {
             fontChange?.changeCurrentFontSize(to: newFontSize)
@@ -26,6 +29,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Life Cycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Sets the initial font size when settingsVC is first loaded to startingFontSize
         newFontSize = startingFontSize
     }
     
@@ -39,12 +43,15 @@ class SettingsViewController: UIViewController {
         newFontSize = Int(sender.value)
     }
     
+    // Updates label to be used in property observer, newFontSize
     func updateLabel() {
+        // optional binding to guard for if newFontSize is nil (no change)
         if let newFontSize = newFontSize {
             previewFontLabel.text = "Preview Font Size: \(newFontSize)"
         } else {
             previewFontLabel.text = "Preview Font Size: \(startingFontSize)"
         }
+        // updates the slider and stepper values to the newFontSize
         slider.value = Float(newFontSize)
         stepper.value = Double(newFontSize)
     }
