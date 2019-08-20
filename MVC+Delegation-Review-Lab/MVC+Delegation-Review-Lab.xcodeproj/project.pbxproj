@@ -14,6 +14,8 @@
 		CD8F803F230AE8ED00CB87B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8F803D230AE8ED00CB87B0 /* LaunchScreen.storyboard */; };
 		CD8F8047230AEA9400CB87B0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F8046230AEA9400CB87B0 /* Movie.swift */; };
 		EA64D73D230B2D7200765420 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64D73C230B2D7200765420 /* SettingsViewController.swift */; };
+		EA64D73F230B335400765420 /* FontChangeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64D73E230B335400765420 /* FontChangeable.swift */; };
+		EA64D741230B45F300765420 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64D740230B45F300765420 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CD8F8040230AE8ED00CB87B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8F8046230AEA9400CB87B0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EA64D73C230B2D7200765420 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "MVC+Delegation-Review-Lab/Controllers/SettingsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		EA64D73E230B335400765420 /* FontChangeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChangeable.swift; sourceTree = "<group>"; };
+		EA64D740230B45F300765420 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				CD8F8046230AEA9400CB87B0 /* Movie.swift */,
+				EA64D73E230B335400765420 /* FontChangeable.swift */,
+				EA64D740230B45F300765420 /* Font.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA64D73F230B335400765420 /* FontChangeable.swift in Sources */,
 				CD8F8037230AE8E900CB87B0 /* ViewController.swift in Sources */,
+				EA64D741230B45F300765420 /* Font.swift in Sources */,
 				CD8F8035230AE8E900CB87B0 /* AppDelegate.swift in Sources */,
 				CD8F8047230AEA9400CB87B0 /* Movie.swift in Sources */,
 				EA64D73D230B2D7200765420 /* SettingsViewController.swift in Sources */,

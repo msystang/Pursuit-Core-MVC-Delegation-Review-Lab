@@ -9,27 +9,44 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    // MARK: - Variables and Constants
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var stepper: NSLayoutConstraint!
+    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var previewFontLabel: UILabel!
     
+    var fontChange: FontChangeable?
+    var startingFontSize = Font.startingFontSize
+    var newFontSize: Int! {
+        didSet {
+            fontChange?.changeCurrentFontSize(to: newFontSize)
+            updateLabel()
+        }
+    }
     
+    // MARK: - Life Cycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        newFontSize = startingFontSize
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: IBActions and UI Functions
+    @IBAction func slideChangeFontSize(_ sender: UISlider) {
+        newFontSize = Int(sender.value)
     }
-    */
-
+    
+    @IBAction func stepChangeFontSize(_ sender: UIStepper) {
+        newFontSize = Int(sender.value)
+    }
+    
+    func updateLabel() {
+        if let newFontSize = newFontSize {
+            previewFontLabel.text = "Preview Font Size: \(newFontSize)"
+        } else {
+            previewFontLabel.text = "Preview Font Size: \(startingFontSize)"
+        }
+        slider.value = Float(newFontSize)
+        stepper.value = Double(newFontSize)
+    }
+    
 }

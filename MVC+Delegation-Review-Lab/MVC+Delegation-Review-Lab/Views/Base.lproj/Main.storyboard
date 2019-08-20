@@ -98,11 +98,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-g5-WGR">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="5" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Rag-g5-WGR">
                                 <rect key="frame" x="48" y="400.5" width="318" height="31"/>
+                                <connections>
+                                    <action selector="slideChangeFontSize:" destination="DXF-rJ-ci4" eventType="valueChanged" id="Prk-qJ-T02"/>
+                                </connections>
                             </slider>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8wa-1h-1dC">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minimumValue="5" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="8wa-1h-1dC">
                                 <rect key="frame" x="160" y="460.5" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepChangeFontSize:" destination="DXF-rJ-ci4" eventType="valueChanged" id="rce-Kx-UPp"/>
+                                </connections>
                             </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,7 +129,7 @@
                     <connections>
                         <outlet property="previewFontLabel" destination="1jn-zl-DT7" id="aR7-gX-dRQ"/>
                         <outlet property="slider" destination="Rag-g5-WGR" id="F5H-OG-QGH"/>
-                        <outlet property="stepper" destination="7aX-sS-cDI" id="JBt-WQ-WVX"/>
+                        <outlet property="stepper" destination="8wa-1h-1dC" id="dva-we-MQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osy-qI-OKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
